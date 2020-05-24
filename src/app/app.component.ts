@@ -109,15 +109,19 @@ export class AppComponent {
     console.log(typeof this.averageSpeed)
   }
 
-  checkLetter(l: string, index: number) {
+  checkLetter() {
 
-    if (this.randomString[index] === l) {
-      this.score.yayLetters++
-    }
-    
-    else {
-      this.score.nayLetters++
-    }
+  let randomArray = this.randomString.split('');
+  let lettersLenght = (this.letters.join('').length) - 1;
+
+  if (this.letters[lettersLenght] === randomArray[lettersLenght]) {
+    this.score.yayLetters++;
+  }
+
+  else {
+    this.score.nayLetters++;
+  }
+
     
   }
 

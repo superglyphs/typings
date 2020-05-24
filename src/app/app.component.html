@@ -17,17 +17,27 @@
   </div>
 </div>
 
-<div class="score">
-    <span>
-      <span>Попадения:</span> {{ this.score.yayWords }}
+<div class="score-container">
+    <span class="score main-score">
+      <span>Попадения думи:</span> 
+      <span class="score-value">{{ this.score.yayWords }}</span> <br>
     </span>
-    <span>
-      <span>Грешни думи:</span> {{ this.score.nayWords }}
+    <span class="score secondary-score">
+      <span>Попадения букви:</span> 
+      <span class="score-value">{{ this.score.yayLetters }}</span> <br>
     </span>
-    <span>
-      <span>Грешни букви:</span> {{ this.score.nayLetters }}
+    <hr>
+    <span class="score main-score">
+      <span>Грешни думи:</span> 
+      <span class="score-value">{{ this.score.nayWords }}</span> <br>
     </span>
-    <span>
-      <span> Средна скорост:</span> {{ this.averageSpeed.toFixed(3) }} секунди на дума
+    <span class="score secondary-score">
+      <span>Грешни букви:</span> 
+      <span class="score-value">{{ this.score.nayLetters }}</span> <br>
+    </span>
+    <hr>
+    <span class="score speed-score">
+      <span>Средна скорост:</span> 
+      <span class="score-value">{{ this.averageSpeed.toFixed(3) }} секунди на дума </span> 
     </span>
 </div>
