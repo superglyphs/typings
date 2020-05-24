@@ -7,9 +7,9 @@
 
 <div class="type-container">
   <div class="type-data">
-    <span [ngStyle]="{'opacity': this.opacity}">{{ this.randomString }}</span>
+    <span class="type-string" [ngStyle]="{'opacity': this.opacity}">{{ this.randomString }}</span>
     <div class="type-input">
-      <span *ngFor="let letter of letters; let i = index;" [ngClass]="{'red': !checkLetter(letter, i)}">
+      <span *ngFor="let letter of letters; let i = index;" [ngClass]="{'red': !stylekLetter(letter, i)}">
       {{ this.letter }}
       </span> 
       <div class="cursor"></div>
@@ -19,9 +19,15 @@
 
 <div class="score">
     <span>
-      <span>Попадения:</span> {{ this.score.yay }}
+      <span>Попадения:</span> {{ this.score.yayWords }}
     </span>
     <span>
-      <span>Грешки:</span> {{ this.score.nay }}
+      <span>Грешни думи:</span> {{ this.score.nayWords }}
+    </span>
+    <span>
+      <span>Грешни букви:</span> {{ this.score.nayLetters }}
+    </span>
+    <span>
+      <span> Средна скорост:</span> {{ this.averageSpeed.toFixed(3) }} секунди на дума
     </span>
 </div>

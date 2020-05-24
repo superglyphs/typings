@@ -58,9 +58,8 @@
     border-radius: 20%;
   }
 
-
   .type-container {
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 68px;
     height: 80px;
     display: flex;
@@ -73,8 +72,8 @@
     position: absolute;
   }
 
-  .fade {
-    animation: fade 10s;
+  .type-string {
+    transition: 0.35s;
   }
 
   .type-input {
@@ -121,15 +120,5 @@
       opacity: 1;
       transform: translateY(0px);
 
-    }
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
     }
   }
