@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
+
+
+  .type-container, input, .score {
+    font-family: 'Montserrat', cursive;
+    // font-family: 'Merriweather', serif;
+  }
+
+  html, body, .home, .hello {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .score {
+    font-size: 16px;
+    color: rgb(160, 160, 160);
+    margin: 30px auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .score > span {
+    margin-right: 20px;
+  }
+
+  header {
+    font-size: 24px;
+    color: rgb(160, 160, 160);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .time-counter {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    width: 30px;
+    text-align: center;
+  }
+
+  .time-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 80px;
+    padding: 0;
+  }
+
+  .time-bar li {
+    display: inline-block;
+    width: 32px;
+    height: 8px;
+    background-color: #ddd;
+    margin: 12px 2px;
+    list-style: none;
+    border-radius: 20%;
+  }
+
+
+  .type-container {
+    margin-top: 80px;
+    font-size: 68px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .type-data {
+    color: #DDD;
+    position: absolute;
+  }
+
+  .fade {
+    animation: fade 10s;
+  }
+
+  .type-input {
+    display: flex;
+    color: #00C78E;
+    opacity: 0.8;
+    outline: none;
+    position: absolute;
+    animation: appear 0.5s;
+    top: 0;
+  }
+
+  .input-character {
+    display: inline-block;
+    animation: appear 0.25s;
+  }
+
+  .red {
+    color: red!important;
+  }
+
+  .cursor {
+    display: inline-block;
+    height: 56px;
+    width: 8px;
+    background-color: #00C78E;
+    animation: blink 1s infinite;
+    transform: translateY(16px);
+  }
+
+  @keyframes blink {
+    0%    {opacity: 0;}
+    50%   {opacity: 0.6;}
+    100%  {opacity: 0;}
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
